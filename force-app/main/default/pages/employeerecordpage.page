@@ -1,0 +1,17 @@
+<apex:page Controller="employeerecord">
+<apex:form >
+<apex:message />
+<apex:pageBlock title="Employee Registration Form">
+<apex:pageBlockSection columns="1">
+
+<apex:inputField value="{!emp.Name}"/>
+<apex:inputField value="{!emp.Email__c}"/>
+<apex:inputField value="{!emp.Salary__c}"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockButtons >
+<apex:commandButton value="Save Record" action="{!saveEmployee}"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

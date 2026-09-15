@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="accountlistcontroller" standardStylesheets="true"  tabStyle="Account">
+    <apex:sectionHeader title="Recent Accounts" subtitle="Overview List"/>
+    <apex:pageBlock title="Recent Account">
+       <!--table componenet to show account list-->
+        <apex:pageBlockTable value="{!accountList}" var="acc">
+            <apex:column headerValue="Account Name">
+            <apex:outputLink value="/{!acc.Id}">{!acc.Name}</apex:outputLink>
+        </apex:column>
+            
+            <apex:column Value="{!acc.Industry}"/>
+            <apex:column Value="{!acc.AnnualRevenue}"/>
+            <apex:column Value="{!acc.phone}"/>
+            
+        </apex:pageBlockTable>
+        
+    </apex:pageBlock>
+</apex:page>

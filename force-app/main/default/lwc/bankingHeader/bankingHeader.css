@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 24px 32px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #032d60;
+}
+
+.greeting {
+    margin: 4px 0 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #181818;
+}
+
+.welcome {
+    margin: 0;
+    font-size: 14px;
+    color: #5c5c5c;
+}

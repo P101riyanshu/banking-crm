@@ -1,0 +1,14 @@
+<apex:page StandardController="Employee__c">
+<h1><centre>Employee Edit Form</centre></h1>
+  <apex:form >
+        <apex:pageBlock title="Edit Employee">
+        <apex:outputText >Employee name :</apex:outputText>
+            <apex:inputField value="{!Employee__c.Name}"/>
+            <apex:outputLabel >Email: </apex:outputLabel>
+            <apex:inputField value="{!Employee__c.Email__c}"/>
+            <apex:outputLabel >Salary: </apex:outputLabel>
+            <apex:inputField value="{!Employee__c.Salary__c}" />
+            <apex:commandButton action="{!save}" value="Save"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,62 @@
+<template>
+    <lightning-quick-action-panel header="Create Bank Account">
+
+        <lightning-combobox
+            name="accountType"
+            label="Account Type"
+            value={accountType}
+            placeholder="Select Account Type"
+            options={accountTypeOptions}
+            onchange={handleChange}
+            required>
+        </lightning-combobox>
+
+        <lightning-input
+            name="accountNumber"
+            label="Account Number"
+            value={accountNumber}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-input
+            name="balance"
+            label="Opening Balance"
+            type="number"
+            value={balance}
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input
+            name="openingDate"
+            label="Opening Date"
+            type="date"
+            value={openingDate}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-combobox
+            name="accountStatus"
+            label="Account Status"
+            value={accountStatus}
+            options={statusOptions}
+            onchange={handleChange}>
+        </lightning-combobox>
+
+        <div slot="footer">
+            <lightning-button
+                label="Cancel"
+                onclick={handleCancel}>
+            </lightning-button>
+
+            <lightning-button
+                variant="brand"
+                label="Create Account"
+                onclick={handleSave}
+                class="slds-m-left_small">
+            </lightning-button>
+        </div>
+
+    </lightning-quick-action-panel>
+</template>

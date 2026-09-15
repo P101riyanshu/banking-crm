@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>It</fullName>
+    <active>true</active>
+    <label>It</label>
+    <picklistValues>
+        <picklist>Employment_Type__c</picklist>
+        <values>
+            <fullName>CRM department</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>It department</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>sales department</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>gender__c</picklist>
+        <values>
+            <fullName>F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>onboarding__c</picklist>
+        <values>
+            <fullName>selected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>today</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>waiting list</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,56 @@
+<template>
+    <lightning-quick-action-panel header="Create Loan">
+
+        <lightning-input
+            name="loanAmount"
+            label="Loan Amount"
+            type="number"
+            value={loanAmount}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-input
+            name="interestRate"
+            label="Interest Rate (%)"
+            type="number"
+            value={interestRate}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-input
+            name="tenure"
+            label="Tenure (Months)"
+            type="number"
+            value={tenure}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-input
+            name="emiAmount"
+            label="EMI Amount"
+            type="number"
+            value={emiAmount}
+            onchange={handleChange}>
+        </lightning-input>
+
+        <div slot="footer">
+
+            <lightning-button
+                label="Cancel"
+                onclick={handleCancel}>
+            </lightning-button>
+
+            <lightning-button
+                variant="brand"
+                label="Create Loan"
+                onclick={handleSave}
+                class="slds-m-left_small">
+            </lightning-button>
+
+        </div>
+
+    </lightning-quick-action-panel>
+</template>

@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Account Details" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+
+            <template if:true={account}>
+                <div class="detail-row">
+                    <span class="label">Account Number</span>
+                    <span class="value">{account.Account_Number__c}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Account Type</span>
+                    <span class="value">{account.Account_Type__c}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Current Balance</span>
+                    <span class="value">
+                        <lightning-formatted-number
+                            value={account.Balance__c}
+                            format-style="currency"
+                            currency-code="INR">
+                        </lightning-formatted-number>
+                    </span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Account Status</span>
+                    <span class="value">{account.Account_Status__c}</span>
+                </div>
+            </template>
+
+            <template if:true={error}>
+                <p>Error loading account details.</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

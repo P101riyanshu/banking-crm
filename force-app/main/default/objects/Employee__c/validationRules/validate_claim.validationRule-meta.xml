@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validate_claim</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( expence__c &gt;50000,  NOT( manager_approval__c) )</errorConditionFormula>
+    <errorMessage>Manager approval is required for expense claims above ₹50,000</errorMessage>
+</ValidationRule>

@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Loan Details" icon-name="standard:loan">
+        <div class="slds-p-around_medium">
+
+            <template if:true={loan}>
+
+                <div class="detail-row">
+                    <span class="label">Loan Amount</span>
+                    <span class="value">
+                        <lightning-formatted-number
+                            value={loan.Loan_Amount__c}
+                            format-style="currency"
+                            currency-code="INR">
+                        </lightning-formatted-number>
+                    </span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Interest Rate</span>
+                    <span class="value">
+                        {loan.Interest_Rate__c} %
+                    </span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Loan Tenure</span>
+                    <span class="value">
+                        {loan.Tenure__c} Years
+                    </span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Loan Status</span>
+                    <span class="value">
+                        {loan.Loan_Status__c}
+                    </span>
+                </div>
+
+            </template>
+
+            <template if:true={error}>
+                <p>Error loading loan details.</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

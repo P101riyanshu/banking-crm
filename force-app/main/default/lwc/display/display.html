@@ -1,0 +1,25 @@
+<template>
+    <lightning-Card title="Student Detail" icon-name="Standard:student__c">
+
+        <!--button action-->
+        <div slot="action">
+        <lightning-button label="modify Student" varient="neutral"></lightning-button>
+        </div>
+
+        <div class="slds-p-horizontal_small">
+
+            <lightning-record-view-form record-id={recordId} object-api-name="student__c">
+                <div class="slds-p-horizontal_small">
+                    <lightning-output-field field-name="Name"></lightning-output-field>
+                    <lightning-output-field field-name="phone__c"></lightning-output-field>
+                    <lightning-output-field field-name="Admission_Date__c"></lightning-output-field>
+                    <lightning-output-field field-name="Date_of_birth__c"></lightning-output-field>
+                    <lightning-output-field field-name="Percentage__c"></lightning-output-field>
+                </div>
+                <div slot="footer">
+                    <span class="slds-p-horizontal_small">student data </span>
+                </div>
+            </lightning-record-view-form>
+        </div>
+    </lightning-Card>
+</template>

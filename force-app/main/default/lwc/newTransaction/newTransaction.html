@@ -1,0 +1,46 @@
+<template>
+    <lightning-quick-action-panel header="New Transaction">
+
+        <lightning-combobox
+            name="transactionType"
+            label="Transaction Type"
+            value={transactionType}
+            options={transactionTypeOptions}
+            onchange={handleChange}
+            required>
+        </lightning-combobox>
+
+        <lightning-input
+            name="amount"
+            label="Amount"
+            type="number"
+            value={amount}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-textarea
+            name="description"
+            label="Description"
+            value={description}
+            onchange={handleChange}>
+        </lightning-textarea>
+
+        <div slot="footer">
+
+            <lightning-button
+                label="Cancel"
+                onclick={handleCancel}>
+            </lightning-button>
+
+            <lightning-button
+                variant="brand"
+                label="Create Transaction"
+                onclick={handleSave}
+                class="slds-m-left_small">
+            </lightning-button>
+
+        </div>
+
+    </lightning-quick-action-panel>
+</template>

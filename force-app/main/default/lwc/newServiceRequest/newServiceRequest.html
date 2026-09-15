@@ -1,0 +1,44 @@
+<template>
+    <lightning-quick-action-panel header="New Service Request">
+
+        <lightning-combobox
+            name="requestType"
+            label="Request Type"
+            value={requestType}
+            options={requestTypeOptions}
+            onchange={handleChange}
+            required>
+        </lightning-combobox>
+
+        <lightning-textarea
+            name="description"
+            label="Description"
+            value={description}
+            onchange={handleChange}
+            required>
+        </lightning-textarea>
+
+        <lightning-combobox
+            name="priority"
+            label="Priority"
+            value={priority}
+            options={priorityOptions}
+            onchange={handleChange}>
+        </lightning-combobox>
+
+        <div slot="footer">
+            <lightning-button
+                label="Cancel"
+                onclick={handleCancel}>
+            </lightning-button>
+
+            <lightning-button
+                variant="brand"
+                label="Create Request"
+                onclick={handleSave}
+                class="slds-m-left_small">
+            </lightning-button>
+        </div>
+
+    </lightning-quick-action-panel>
+</template>

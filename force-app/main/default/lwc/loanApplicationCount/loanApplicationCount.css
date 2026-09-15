@@ -1,0 +1,22 @@
+:host {
+    display: block;
+}
+
+lightning-card {
+    --slds-c-card-radius-border: 10px;
+}
+
+.count {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0 5px;
+    color: #032d60;
+}
+
+.label {
+    text-align: center;
+    padding-bottom: 20px;
+    color: #5c5c5c;
+    font-size: 13px;
+}

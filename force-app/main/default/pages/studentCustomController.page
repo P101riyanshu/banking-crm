@@ -1,0 +1,39 @@
+<apex:page controller="StudentDashboardController">
+
+    <apex:form >
+
+        <apex:pageBlock title="Student Dashboard">
+
+            <apex:pageBlockSection columns="2">
+
+                <apex:inputText value="{!searchText}" label="Search Student"/>
+                <apex:inputCheckbox value="{!qualifiedOnly}"/>
+
+                <apex:commandButton value="Search" action="{!search}" rerender="table,stats"/>
+                <apex:commandButton value="Reset Filter" action="{!resetFilter}" rerender="table,stats"/>
+
+            </apex:pageBlockSection>
+
+            <apex:pageBlock id="stats" title="Dashboard Statistics">
+
+                Total Students : {!TotalStudents}<br/>
+                Qualified Students : {!QualifiedStudents}<br/>
+                Average Percentage : {!AveragePercentage}<br/>
+                Scholarship Students : {!ScholarshipStudents}
+
+            </apex:pageBlock>
+
+            <apex:pageBlockTable value="{!students}" var="s" id="table">
+
+                <apex:column value="{!s.Name}" headerValue="Student Name"/>
+                <apex:column value="{!s.Course__r.Name}" headerValue="Course"/>
+                <apex:column value="{!s.Percentage__c}" headerValue="Percentage"/>
+                <apex:column value="{!s.Admission_Status__c}" headerValue="Status"/>
+
+            </apex:pageBlockTable>
+
+        </apex:pageBlock>
+
+    </apex:form>
+
+</apex:page>

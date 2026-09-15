@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>civil</fullName>
+    <active>true</active>
+    <label>civil</label>
+    <picklistValues>
+        <picklist>department__c</picklist>
+        <values>
+            <fullName>AIDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

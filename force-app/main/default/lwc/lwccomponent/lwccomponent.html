@@ -1,0 +1,24 @@
+<template>
+    <!-- Lightning Card -->
+    <lightning-card title="Account Records" icon-name="standard:account">
+
+        <!-- Action Buttons -->
+        <div slot="actions">
+            <lightning-button label="Edit" onclick={handleEdit}></lightning-button>
+            <lightning-button label="New" onclick={handleSave}></lightning-button>
+        </div>
+
+        <!-- Main Body -->
+        <div class="slds-p-horizontal_small">
+            <p class="slds-text-heading_medium">Get Cloudy West</p>
+            <p class="slds-text-heading_small">Type Customer - Direct</p>
+            <p>Industry: Banking</p>
+        </div>
+
+        <!-- Footer -->
+        <div slot="footer">
+            <a href="#" onclick={handleSubmit}>View All Related Accounts</a>
+        </div>
+
+    </lightning-card>
+</template>

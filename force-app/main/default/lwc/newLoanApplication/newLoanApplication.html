@@ -1,0 +1,62 @@
+<template>
+    <lightning-quick-action-panel header="New Loan Application">
+
+        <lightning-combobox
+            name="loanType"
+            label="Loan Type"
+            value={loanType}
+            options={loanTypeOptions}
+            onchange={handleChange}
+            required>
+        </lightning-combobox>
+
+        <lightning-input
+            name="loanAmount"
+            label="Loan Amount"
+            type="number"
+            value={loanAmount}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-input
+            name="interestRate"
+            label="Interest Rate (%)"
+            type="number"
+            value={interestRate}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-input
+            name="tenure"
+            label="Tenure (Months)"
+            type="number"
+            value={tenure}
+            onchange={handleChange}
+            required>
+        </lightning-input>
+
+        <lightning-input
+            name="purpose"
+            label="Purpose"
+            value={purpose}
+            onchange={handleChange}>
+        </lightning-input>
+
+        <div slot="footer">
+            <lightning-button
+                label="Cancel"
+                onclick={handleCancel}>
+            </lightning-button>
+
+            <lightning-button
+                variant="brand"
+                label="Submit Application"
+                onclick={handleSave}
+                class="slds-m-left_small">
+            </lightning-button>
+        </div>
+
+    </lightning-quick-action-panel>
+</template>

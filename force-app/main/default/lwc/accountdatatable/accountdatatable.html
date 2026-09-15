@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Account Detail" icon-name="standard:contact">
+        <template if:true={contactsData}>
+            <lightning-datatable
+                key-field="Id"
+                data={contactsData}
+                columns={columns}
+                show-row-number-column
+                hide-checkbox-column>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

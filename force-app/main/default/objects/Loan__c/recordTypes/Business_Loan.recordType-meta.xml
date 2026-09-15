@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Loan</fullName>
+    <active>false</active>
+    <label>Business Loan</label>
+    <picklistValues>
+        <picklist>Branch__c</picklist>
+        <values>
+            <fullName>City Branch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Main Branch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Branch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Branch</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loan_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defaulted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loan_Type__c</picklist>
+        <values>
+            <fullName>Business Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vehicle Loan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

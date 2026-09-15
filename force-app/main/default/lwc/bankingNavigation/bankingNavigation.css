@@ -1,0 +1,250 @@
+/* .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px;
+}
+
+.emi-container {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+ */
+
+
+
+
+
+
+:host {
+    display: block;
+}
+
+
+/* =========================
+   MAIN NAVIGATION CARD
+   ========================= */
+
+.navigation-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.10);
+    border: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.nav-header h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    color: #032d60;
+}
+
+.nav-header p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: #706e6b;
+}
+
+.nav-icon {
+    font-size: 32px;
+}
+
+
+/* =========================
+   BUTTON CONTAINER
+   ========================= */
+
+.nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+
+/* =========================
+   NAVIGATION BUTTON
+   ========================= */
+
+.nav-button {
+    min-height: 72px;
+    border: 1px solid #d8dde6;
+    border-radius: 10px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #032d60;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Hover */
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+    background: #f4f8fc;
+}
+
+
+/* Click */
+
+.nav-button:active {
+    transform: translateY(0);
+}
+
+
+/* Icons */
+
+.icon {
+    font-size: 20px;
+}
+
+
+/* =========================
+   EMI BUTTON
+   ========================= */
+
+.emi-button {
+    background: #f4f8fc;
+    border-color: #0176d3;
+}
+
+
+/* =========================
+   DASHBOARD BUTTON
+   ========================= */
+
+.dashboard-button {
+    background: #032d60;
+    color: #ffffff;
+    border-color: #032d60;
+}
+
+.dashboard-button:hover {
+    background: #163f73;
+}
+
+
+/* =========================
+   EMI SECTION
+   ========================= */
+
+.emi-section {
+    margin-top: 20px;
+    background: #ffffff;
+
+    border-radius: 14px;
+    border: 1px solid #d8dde6;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.10);
+
+    overflow: hidden;
+}
+
+
+/* EMI Header */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 22px;
+
+    background: #f4f8fc;
+    border-bottom: 1px solid #d8dde6;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #032d60;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.section-header p {
+    margin: 4px 0 0;
+    color: #706e6b;
+    font-size: 13px;
+}
+
+
+/* Close button */
+
+.close-button {
+    border: none;
+    background: transparent;
+
+    font-size: 20px;
+    color: #706e6b;
+
+    cursor: pointer;
+
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.close-button:hover {
+    background: #e5e7eb;
+}
+
+
+/* EMI Component */
+
+.emi-component {
+    padding: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media screen and (max-width: 1000px) {
+
+    .nav-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .nav-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation-card {
+        padding: 16px;
+    }
+
+}

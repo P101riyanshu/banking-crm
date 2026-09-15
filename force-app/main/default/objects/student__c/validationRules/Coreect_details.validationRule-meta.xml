@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Coreect_details</fullName>
+    <active>true</active>
+    <errorConditionFormula>Fee_Paid__c  &gt;  Total_Fees__c</errorConditionFormula>
+    <errorMessage>Fees Paid cannot be greater than Total Fees</errorMessage>
+</ValidationRule>

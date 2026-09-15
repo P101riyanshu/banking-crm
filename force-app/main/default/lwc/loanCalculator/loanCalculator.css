@@ -1,0 +1,17 @@
+.result-box {
+    border: 1px solid #d8dde6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.result-box p {
+    margin: 0 0 6px;
+    color: #5c6670;
+}
+
+.result-box strong {
+    font-size: 18px;
+}

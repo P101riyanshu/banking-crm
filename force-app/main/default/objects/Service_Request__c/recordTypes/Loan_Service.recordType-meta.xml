@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loan_Service</fullName>
+    <active>false</active>
+    <label>Loan Service</label>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low%2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium%2C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type__c</picklist>
+        <values>
+            <fullName>Account Issue%2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loan Issue%2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transaction Issue%2C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress%2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New%2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved%2C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

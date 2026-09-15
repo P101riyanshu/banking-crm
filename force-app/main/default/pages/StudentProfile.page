@@ -1,0 +1,25 @@
+<apex:page standardController="student__c">
+    <apex:pageBlock title="Student Profile">
+        <apex:pageBlockSection title="Student Details" columns="2">
+            <apex:outputField value="{!student__c.Name}"/>
+            <apex:outputField value="{!student__c.Email__c}"/>
+            <apex:outputField value="{!student__c.Phone__c}"/>
+            <apex:outputField value="{!student__c.Course__r.Name}"/>
+            <apex:outputField value="{!student__c.Admission_Date__c}"/>
+            <apex:outputField value="{!student__c.Admission_Status__c}"/>
+            <apex:outputField value="{!student__c.Total_Fees__c}"/>
+            <apex:outputField value="{!student__c.Fee_Paid__c}"/>
+            <apex:outputField value="{!student__c.Remaining_Fees__c}"/>
+        </apex:pageBlockSection>
+
+
+        <apex:pageBlockSection title="Admission Eligibility" columns="1">
+            <apex:outputPanel rendered="{!student__c.Is_Eligible__c}">
+                <h2>Eligible for Admission</h2>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!NOT(student__c.Is_Eligible__c)}">
+                <h2>Not Eligible</h2>
+            </apex:outputPanel>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

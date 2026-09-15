@@ -1,0 +1,9 @@
+<apex:page standardController="student__c" extensions="studentExtension">
+<apex:pageMessages ></apex:pageMessages>
+    <apex:pageBlock title="Student Information">
+        <apex:outputText value="{!welcomeMessage}"/><br/>
+        <apex:outputText value="{!grade}"/><br/>
+        <apex:outputText value="{!scholarshipStatus}"/><br/>
+        <apex:outputText value="{!courseCategory}"/>
+    </apex:pageBlock>
+</apex:page>

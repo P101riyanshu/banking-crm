@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Customer" icon-name="standard:contact">
+        <div class="slds-p-around_medium">
+
+            <template if:true={customer}>
+                <div class="detail-row">
+                    <span class="label">Customer Name</span>
+                    <span class="value">{customer.Name}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Customer_ID</span>
+                    <span class="value">{accountNumber}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Email</span>
+                    <span class="value">{customer.Email__c}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Phone</span>
+                    <span class="value">{customer.Phone__c}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Address</span>
+                    <span class="value">{customer.Address__c}</span>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Customer Status</span>
+                    <span class="value">{customer.Customer_Status__c}</span>
+                </div>
+            </template>
+
+            <template if:true={error}>
+                <p>Error loading customer details.</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

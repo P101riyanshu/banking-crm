@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>status__c</fullName>
+    <label>insurance</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>egilible</fullName>
+                <default>false</default>
+                <label>egilible</label>
+            </value>
+            <value>
+                <fullName>not eligible</fullName>
+                <default>false</default>
+                <label>not eligible</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

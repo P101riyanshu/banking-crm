@@ -1,0 +1,52 @@
+<template>
+ <lightning-card title="Account List" icon-name="standard:contact">
+    <div class="slds-var-m-around_medium">
+        <template lwc:if={account.data}>
+            <template for:each={account.data} for:item="acc">
+                <li key={acc.Id} class="slds-item">
+                    <strong>{acc.Name}</strong>
+                     <br/>
+                     {acc.Industry}
+                     <br/>
+                    {acc.Phone}
+                </li>
+            </template>
+        </template>
+
+        <template lwc:if={account.erre}>
+            <div class="slds-text-color_error">
+                error loading account data
+            </div>
+        </template>
+    </div>
+ </lightning-card>
+</template> 
+
+<!-- 
+<template>
+    <lightning-card title="Account List" icon-name="standard:account">
+
+        <div class="slds-var-m-around_medium">
+
+            <template lwc:if={account.data}>
+
+                <ul>
+                    <template for:each={account.data} for:item="acc">
+                        <li key={acc.Id}>
+                            <strong>{acc.Name}</strong>
+                            <br/>
+                            {acc.Industry}
+                            <br/>
+                            {acc.Phone}
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            <template lwc:if={account.error}>
+                <div class="slds-text-color_error">
+                    Error loading Account data.
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template> -->

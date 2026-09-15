@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>correct_contact_number</fullName>
+    <active>true</active>
+    <description>contact number validation</description>
+    <errorConditionFormula>LEN( Phone__c ) &lt;&gt; 10</errorConditionFormula>
+    <errorDisplayField>Phone__c</errorDisplayField>
+    <errorMessage>give correct contact nuber</errorMessage>
+</ValidationRule>

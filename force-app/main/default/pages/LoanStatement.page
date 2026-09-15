@@ -1,0 +1,71 @@
+<apex:page controller="LoanStatementController"
+           lightningStylesheets="true">
+    <style>
+        .header {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .print-section {
+            text-align: right;
+            margin: 15px 30px;
+            padding: 10px;
+            background-color: #f3f3f3;
+        }
+
+        .printButton {
+            padding: 8px 20px;
+            font-weight: bold;
+        }
+
+        @media print {
+            .print-section {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Banking Customer Relationship System</h1>
+        <h2>Loan Statement</h2>
+    </div>
+
+    <!-- Separate Print Section -->
+    <div class="print-section">
+        <apex:form >
+            <apex:commandButton value="Print Statement"
+                onclick="window.print(); return false;"
+                styleClass="printButton"/>
+        </apex:form>
+    </div>
+
+    <!-- Loan Details Section -->
+    <apex:form >
+
+        <apex:pageBlock title="Loan Details">
+
+            <apex:pageBlockSection columns="2">
+
+                <apex:outputField value="{!loan.Name}"/>
+                <apex:outputField value="{!loan.Loan_Amount__c}"/>
+
+                <apex:outputField value="{!loan.Interest_Rate__c}"/>
+                <apex:outputField value="{!loan.Tenure__c}"/>
+
+                <apex:outputField value="{!loan.EMI_Amount__c}"/>
+                <apex:outputField value="{!loan.Total_Payable_Amount__c}"/>
+
+                <apex:outputField value="{!loan.Total_Interest__c}"/>
+                <apex:outputField value="{!loan.Loan_Status__c}"/>
+
+                <apex:outputField value="{!loan.Start_Date__c}"/>
+                <apex:outputField value="{!loan.End_Date__c}"/>
+
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+    </apex:form>
+
+</apex:page>

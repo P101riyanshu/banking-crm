@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="EMI Summary" icon-name="utility:moneybag">
+        <div class="slds-p-around_medium">
+
+            <template if:true={loan}>
+                
+                <div class="detail-row">
+                    <span class="label">Current EMI</span>
+                    <lightning-formatted-number
+                        value={loan.EMI_Amount__c}
+                        format-style="currency"
+                        currency-code="INR">
+                    </lightning-formatted-number>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Total Payable Amount</span>
+                    <lightning-formatted-number
+                        value={loan.Total_Payable_Amount__c}
+                        format-style="currency"
+                        currency-code="INR">
+                    </lightning-formatted-number>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Total Interest</span>
+                    <lightning-formatted-number
+                        value={loan.Total_Interest__c}
+                        format-style="currency"
+                        currency-code="INR">
+                    </lightning-formatted-number>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Tenure</span>
+                    <span>{loan.Tenure__c} Months</span>
+                </div>
+
+            </template>
+
+            <template if:true={error}>
+                <p>Error loading EMI details.</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

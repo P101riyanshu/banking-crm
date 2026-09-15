@@ -1,0 +1,26 @@
+<apex:page standardController="student__c">
+<apex:form >
+    <apex:pageBlock title="Display Student Record">
+    <apex:pageBlockSection >
+        <apex:outputField value="{!student__c.Name}"/>
+     
+        <apex:outputField value="{!student__c.Email__c}"/>
+        
+        <apex:outputField value="{!student__c.Phone__c}"/>
+
+        <apex:outputField value="{!student__c.Percentage__c}"/>
+
+        <apex:outputField value="{!student__c.Course__c}"/>
+
+        <apex:outputField value="{!student__c.Fee_Paid__c}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageblockbuttons >
+            <apex:commandButton value="edit" action="{!edit}"/>
+            <apex:commandButton value="Delete" action="{!delete}"/>
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageblockbuttons>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

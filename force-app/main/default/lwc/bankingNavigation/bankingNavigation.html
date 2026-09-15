@@ -1,0 +1,83 @@
+<template>
+
+    <div class="navigation-card">
+
+
+        <div class="nav-buttons">
+
+            <button class="nav-button" onclick={openCustomers}>
+                <span class="icon">👤</span>
+                <span>Customers</span>
+            </button>
+
+            <button class="nav-button" onclick={openBankAccounts}>
+                <span class="icon">💳</span>
+                <span>Bank Accounts</span>
+            </button>
+
+            <button class="nav-button" onclick={openLoanApplications}>
+                <span class="icon">📄</span>
+                <span>Loan Applications</span>
+            </button>
+
+            <button class="nav-button" onclick={openLoans}>
+                <span class="icon">💰</span>
+                <span>Loans</span>
+            </button>
+
+            <button class="nav-button" onclick={openTransactions}>
+                <span class="icon">💸</span>
+                <span>Transactions</span>
+            </button>
+
+            <button class="nav-button" onclick={openServiceRequests}>
+                <span class="icon">🎧</span>
+                <span>Service Requests</span>
+            </button>
+
+            <button
+                class="nav-button emi-button"
+                onclick={toggleEMI}>
+                <span class="icon">🧮</span>
+                <span>EMI Calculator</span>
+            </button>
+
+            <button
+                class="nav-button dashboard-button"
+                onclick={openDashboard}>
+                <span class="icon">📊</span>
+                <span>Banking Analytics</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- EMI Calculator -->
+    <template if:true={showEMI}>
+
+        <div class="emi-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>EMI Calculator</h2>
+                    <p>Calculate your monthly loan payment</p>
+                </div>
+
+                <button
+                    class="close-button"
+                    onclick={toggleEMI}>
+                    ✕
+                </button>
+            </div>
+
+            <div class="emi-component">
+                <c-loan-Calculator></c-loan-Calculator>
+            </div>
+
+        </div>
+
+    </template>
+
+</template>

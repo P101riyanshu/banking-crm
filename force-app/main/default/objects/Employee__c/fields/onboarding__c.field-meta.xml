@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>onboarding__c</fullName>
+    <label>onboarding Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>today</fullName>
+                <default>false</default>
+                <label>today</label>
+            </value>
+            <value>
+                <fullName>selected</fullName>
+                <default>false</default>
+                <label>selected</label>
+            </value>
+            <value>
+                <fullName>waiting list</fullName>
+                <default>false</default>
+                <label>waiting list</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
