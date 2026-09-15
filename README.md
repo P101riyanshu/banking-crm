@@ -1,58 +1,59 @@
-# Salesforce DX Project
+# Banking CRM
 
-Salesforce DX is a development approach that brings source-driven development, team collaboration, and continuous integration to the Salesforce Platform. Instead of working directly in an org through a web browser, you work with metadata as source files in a local DX project, track changes in version control, and deploy through automated processes.
+This is my Salesforce Banking CRM project. I built it to practise turning a real banking workflow into a Salesforce application instead of just creating isolated Apex or LWC examples.
 
-This project template gets you started with the tools and structure you need to build Salesforce applications using source control, scratch orgs, and the Salesforce CLI.
+The project brings customer onboarding, bank accounts, loan applications, transactions, and service requests into one place. The aim is to give bank staff a clearer view of a customer and the activity connected to their account.
 
-## Prerequisites
+## What I built
 
-Before you start, make sure you have:
+- Custom objects for customers, bank accounts, loan applications, loans, transactions, and service requests.
+- Lightning Web Components for common banking tasks, including account creation, transaction entry, loan calculations, EMI summaries, account details, and customer/account counts.
+- Apex controllers and trigger handlers to support the UI and apply business logic.
+- Record-triggered and scheduled flows for automations such as loan-status updates and payment reminders.
+- Custom tabs, page layouts, quick actions, permission sets, and profiles to make the app usable for different banking roles.
 
-- **Salesforce CLI** - Download from [developer.salesforce.com/tools/salesforcecli](https://developer.salesforce.com/tools/salesforcecli). See [Install Salesforce CLI](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm) for details.
-- **VS Code with Salesforce Extension Pack** - See [Installation Instructions](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/install.html) for details. Includes the Agentforce Vibes extension.
-- **A development org** - Sign up for a free Developer Edition org [here](https://developer.salesforce.com/signup).
-- **Dev Hub enabled** (optional, required to create scratch orgs) - You can enable Dev Hub in your development org under Setup > Dev Hub.  See [Provide Developers Access to Salesforce DX Tools](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_dx_tools.htm).
+## Project structure
 
-## Project Structure
+```text
+force-app/main/default/
+├── classes/          Apex controllers and supporting logic
+├── triggers/         Trigger-based validation and automation
+├── lwc/              Lightning Web Components
+├── objects/          Custom object definitions and fields
+├── flows/            Salesforce Flow automations
+├── layouts/          Page layouts
+├── permissionsets/   Access configuration
+└── tabs/             Custom navigation tabs
+```
 
-Your DX project follows this structure:
+## Getting started
 
-- **`force-app/main/default/`** - Your metadata source files live in this default package directory. You can configure additional package directories in the `sfdx-project.json` file.
-- **`config/`** - Scratch org definitions and project settings
-- **`scripts/`** - Automation scripts for common tasks
-- **`sfdx-project.json`** - Project manifest that defines package directories, namespace, API version, and other project-level settings
+### Prerequisites
 
-See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm).
+- Salesforce CLI
+- VS Code with the Salesforce Extension Pack
+- A Salesforce Developer Edition, sandbox, or scratch org
 
-## Get Started
+### Authorize an org
 
-Ready to start developing? The [Get Started with Salesforce DX](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_get_started_dx.htm) guide walks you through your first project, from creating a scratch org to creating a simple Apex class or LWC to deploying your code to a sandbox.
+```bash
+sf org login web --alias my-org
+```
 
-## Common Salesforce CLI Commands
+### Deploy the project
 
-Here are common CLI commands that you'll use the most:
+```bash
+sf project deploy start --source-dir force-app --target-org my-org
+```
 
-- `sf org login web`: Authorize an org
-- `sf org open`: Open your org in a browser
-- `sf org create scratch`: Create a scratch org
-- `sf project deploy start`: Deploy metadata to your org
-- `sf project retrieve start`: Retrieve metadata from your org
-- `sf template generate <artifact>`: Scaffold new components, such as Apex classes and triggers, LWC components, Lightning apps, and more
-- `sf apex <command>`: Run Apex tests, run anonymous Apex blocks, and view logs
-- `sf data <command>`: Work with test data
-- `sf alias <command>`: Manage org aliases
-- `sf config <command>`: Configure CLI settings
+### Retrieve changes made in Salesforce
 
-## Use Agentforce Vibes to Build Lightning Apps
+```bash
+sf project retrieve start --source-dir force-app --target-org my-org
+```
 
-Transform your ideas into custom Lightning apps that extend CRM workflows directly in Lightning Experience. Through natural conversations with Agentforce Vibes, implement custom objects and fields, complex business logic, and dynamic UI components. See [Build a Lightning App Using Agentforce Vibes](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/lexapp-overview.html).
+## Notes
 
-## Additional Resources
+This repository stores Salesforce metadata and source code only. Local Salesforce authentication, cache files, dependencies, and environment files are ignored through `.gitignore`.
 
-- [Agentforce Vibes Developer Guide](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/einstein-overview.html)
-- [Salesforce CLI Installation Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/)
-- [Salesforce CLI Plugin Development Guide](https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/conceptual-overview.html)
-- [Salesforce VS Code Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-
+I am continuing to improve the CRM by refining the banking workflows, adding validation, and making the Lightning experience easier for users to work with.
